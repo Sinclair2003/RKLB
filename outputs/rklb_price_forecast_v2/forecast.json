@@ -1,0 +1,102 @@
+{
+  "config": {
+    "csv_path": "market_data/rklb_daily.csv",
+    "train_end": "2023-12-31",
+    "valid_end": "2024-12-31",
+    "test_end": "2099-12-31",
+    "context_symbols": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "^VIX",
+      "^TNX",
+      "DX-Y.NYB",
+      "CL=F",
+      "GC=F"
+    ],
+    "alpha_grid": [
+      0.1,
+      1.0,
+      5.0,
+      20.0,
+      100.0
+    ],
+    "gamma_grid": [
+      0.1,
+      0.3,
+      0.7,
+      1.0
+    ],
+    "blend_grid": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "best_alpha": 100.0,
+    "best_gamma": 1.0,
+    "best_blend": 0.7,
+    "feature_count": 59
+  },
+  "samples": {
+    "train": 720,
+    "valid": 252,
+    "test": 278
+  },
+  "metrics": {
+    "train": {
+      "model_mae": 0.21298036132773046,
+      "model_rmse": 0.3713943716651974,
+      "model_mape": 0.02729446949371589,
+      "model_directional_acc": 0.6611111111111111,
+      "naive_mae": 0.24551389813423158,
+      "naive_rmse": 0.4489589697557637,
+      "naive_mape": 0.031271161414987945,
+      "naive_directional_acc": 0.019444444444444445,
+      "mae_improvement_vs_naive": 0.03253353680650112,
+      "rmse_improvement_vs_naive": 0.07756459809056632
+    },
+    "valid": {
+      "model_mae": 0.2693692556266841,
+      "model_rmse": 0.5012903871713209,
+      "model_mape": 0.028635701762108747,
+      "model_directional_acc": 0.6547619047619048,
+      "naive_mae": 0.32186508557153126,
+      "naive_rmse": 0.6194474313828212,
+      "naive_mape": 0.03246905816807912,
+      "naive_directional_acc": 0.007936507936507936,
+      "mae_improvement_vs_naive": 0.05249582994484714,
+      "rmse_improvement_vs_naive": 0.1181570442115003
+    },
+    "test": {
+      "model_mae": 1.943601506848629,
+      "model_rmse": 2.794024768484175,
+      "model_mape": 0.04502391403942764,
+      "model_directional_acc": 0.5179856115107914,
+      "naive_mae": 1.7974100044305374,
+      "naive_rmse": 2.6200555199678695,
+      "naive_mape": 0.0416663696150264,
+      "naive_directional_acc": 0.007194244604316547,
+      "mae_improvement_vs_naive": -0.14619150241809153,
+      "rmse_improvement_vs_naive": -0.17396924851630535
+    }
+  },
+  "forecast": {
+    "last_observed_date": "2026-02-12",
+    "approx_next_trading_date": "2026-02-13",
+    "last_close": 66.01000213623047,
+    "pred_next_return": 0.03865297594179751,
+    "pred_next_close": 68.56148516072018,
+    "approx_68pct_interval_close": [
+      64.655866025936,
+      72.46710429550436
+    ]
+  }
+}

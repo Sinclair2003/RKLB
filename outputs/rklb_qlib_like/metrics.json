@@ -1,0 +1,70 @@
+{
+  "config": {
+    "csv_path": "market_data/rklb_daily.csv",
+    "output_dir": "outputs/rklb_qlib_like",
+    "horizon": 1,
+    "train_end": "2023-12-31",
+    "valid_end": "2024-12-31",
+    "test_end": "2099-12-31",
+    "transaction_cost_bps": 5.0,
+    "annualization": 252,
+    "ridge_alpha": 5.0,
+    "threshold_grid": [
+      -0.005,
+      -0.002,
+      0.0,
+      0.002,
+      0.005
+    ]
+  },
+  "feature_count": 12,
+  "features": [
+    "ret_1",
+    "ret_5",
+    "ret_10",
+    "vol_5",
+    "vol_20",
+    "ma_ratio_5",
+    "ma_ratio_10",
+    "ma_ratio_20",
+    "ma_ratio_60",
+    "rsi_14",
+    "atr_norm_14",
+    "vol_z_20"
+  ],
+  "metrics": {
+    "train": {
+      "total_return": -0.26627127382960525,
+      "annual_return": 0.15607350885892357,
+      "annual_vol": 0.7273250809041851,
+      "sharpe": 0.21458562746784207,
+      "max_drawdown": -0.771498779378938,
+      "win_rate": 0.45555555555555555,
+      "ic_pearson": 0.09022980435432104,
+      "ic_spearman": 0.07096542098915258,
+      "threshold": -0.005
+    },
+    "valid": {
+      "total_return": 3.2362366463672503,
+      "annual_return": 4.342588849594102,
+      "annual_vol": 0.6961167164811718,
+      "sharpe": 6.238305655904412,
+      "max_drawdown": -0.3639639909773813,
+      "win_rate": 0.4801587301587302,
+      "ic_pearson": -0.03839451735478762,
+      "ic_spearman": -0.045278717720395,
+      "threshold": -0.005
+    },
+    "test": {
+      "total_return": 1.8523380062860055,
+      "annual_return": 2.809848851000734,
+      "annual_vol": 0.8928835043371303,
+      "sharpe": 3.1469378002304387,
+      "max_drawdown": -0.46503265898171386,
+      "win_rate": 0.5035971223021583,
+      "ic_pearson": 0.022210109836789144,
+      "ic_spearman": 0.02131966554200455,
+      "threshold": -0.005
+    }
+  }
+}

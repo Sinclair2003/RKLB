@@ -1,0 +1,72 @@
+{
+  "config": {
+    "csv_path": "market_data/rklb_daily.csv",
+    "train_end": "2023-12-31",
+    "valid_end": "2024-12-31",
+    "test_end": "2099-12-31",
+    "alpha_grid": [
+      0.1,
+      1.0,
+      5.0,
+      20.0,
+      50.0,
+      100.0
+    ],
+    "best_alpha": 0.1,
+    "best_blend": 0.0
+  },
+  "samples": {
+    "train": 760,
+    "valid": 252,
+    "test": 278
+  },
+  "metrics": {
+    "train": {
+      "model_mae": 0.23700000800584492,
+      "model_rmse": 0.43776132130702144,
+      "model_mape": 0.030045832902897914,
+      "model_directional_acc": 0.018421052631578946,
+      "naive_mae": 0.23700000800584492,
+      "naive_rmse": 0.43776132130702144,
+      "naive_mape": 0.030045832902897914,
+      "naive_directional_acc": 0.475,
+      "mae_improvement_vs_naive": 0.0,
+      "rmse_improvement_vs_naive": 0.0
+    },
+    "valid": {
+      "model_mae": 0.32186508557153126,
+      "model_rmse": 0.6194474313828212,
+      "model_mape": 0.03246905816807912,
+      "model_directional_acc": 0.007936507936507936,
+      "naive_mae": 0.32186508557153126,
+      "naive_rmse": 0.6194474313828212,
+      "naive_mape": 0.03246905816807912,
+      "naive_directional_acc": 0.5238095238095238,
+      "mae_improvement_vs_naive": 0.0,
+      "rmse_improvement_vs_naive": 0.0
+    },
+    "test": {
+      "model_mae": 1.7974100044305372,
+      "model_rmse": 2.620055519967869,
+      "model_mape": 0.0416663696150264,
+      "model_directional_acc": 0.007194244604316547,
+      "naive_mae": 1.7974100044305372,
+      "naive_rmse": 2.620055519967869,
+      "naive_mape": 0.0416663696150264,
+      "naive_directional_acc": 0.460431654676259,
+      "mae_improvement_vs_naive": 0.0,
+      "rmse_improvement_vs_naive": 0.0
+    }
+  },
+  "forecast": {
+    "last_observed_date": "2026-02-12",
+    "approx_next_trading_date": "2026-02-13",
+    "last_close": 66.01000213623047,
+    "pred_next_close": 66.01000213623047,
+    "pred_change_pct_vs_last_close": 0.0,
+    "approx_68pct_interval": [
+      63.39411091210215,
+      68.62589336035879
+    ]
+  }
+}
